@@ -1,7 +1,18 @@
 import React from 'react';
 
-const Label = () => {
-  return <h1>This is a label!</h1>;
+interface Props {
+  color: string;
+}
+
+const Label = ({ color }: Props) => {
+  const labelStyles = {
+    fontFamily: 'monospace',
+    fontSize: '22pt',
+    padding: '15px',
+    margin: 0
+  };
+
+  return <p style={labelStyles}>{color}</p>;
 };
 
 export default Label;

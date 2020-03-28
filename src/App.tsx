@@ -2,10 +2,8 @@ import React from 'react';
 import { Button, Col, Container, Form, Jumbotron, Row } from 'react-bootstrap';
 
 import Card from './components/Card';
-import Square from './components/Square';
 
 const App = () => {
-  const [color, setColor] = React.useState('#000000');
 
   return (
     <>
@@ -42,7 +40,7 @@ const App = () => {
         </Row>
         <Row>
           <Col>
-            <Card color="#000" />
+            <Card color="#38DDA3" />
           </Col>
         </Row>
       </Container>

@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Square = () => {
+interface Props {
+  color: string;
+}
+
+const Square = ({ color }: Props) => {
   const squareStyles = {
-    height: '300px',
-    backgroundColor: '#FF6663'
+    height: '200px',
+    backgroundColor: color
   };
 
   return <div style={squareStyles}> </div>;

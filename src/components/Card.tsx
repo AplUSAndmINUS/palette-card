@@ -1,23 +1,25 @@
 import React from 'react';
 
+import Label from './Label';
 import Square from './Square';
 
 interface Props {
   color: string;
 }
 
-const Card = (color: Props) => {
+const Card = ({ color }: Props) => {
   const cardStyles = {
-    height: '300px',
+    height: '275px',
     width: '200px',
     padding: 0,
-    margin: '35px 0',
+    marginTop: '25px',
     backgroundColor: '#FFF',
     boxShadow: '5px 5px 10px rgba(0,0,0,0.3)'
   };
 
   return <div style={cardStyles}> 
-    <Square />
+    <Square color={color} />
+    <Label color={color} />
   </div>;
 };
 
