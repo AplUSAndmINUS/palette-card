@@ -4,7 +4,7 @@ import { Button, Col, Container, Form, Jumbotron, Row } from 'react-bootstrap';
 import Card from './components/Card';
 
 const App = () => {
-
+  const [color, setColor] = React.useState('#3844C3');
   return (
     <>
       <Jumbotron>
@@ -40,7 +40,7 @@ const App = () => {
         </Row>
         <Row>
           <Col>
-            <Card color="#38DDA3" />
+            <Card color={color} />
           </Col>
         </Row>
       </Container>
