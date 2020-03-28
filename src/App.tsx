@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Jumbotron } from 'react-bootstrap';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <Jumbotron>
+        <h1>Palette Card</h1>
+        <p>This application takes a web hex value (FFFFFF, e.g.), and displays the color as a palette card.</p>
+      </Jumbotron>
+    </>
+  )
+};
 
 export default App;
