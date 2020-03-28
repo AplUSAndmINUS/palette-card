@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Square from './Square';
+
 interface Props {
   color: string;
 }
@@ -14,7 +16,9 @@ const Card = (color: Props) => {
     boxShadow: '5px 5px 10px rgba(0,0,0,0.3)'
   };
 
-  return <div style={cardStyles}> </div>;
+  return <div style={cardStyles}> 
+    <Square />
+  </div>;
 };
 
 export default Card;

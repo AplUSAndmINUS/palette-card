@@ -1,10 +1,5 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Row from 'react-bootstrap/Row';
+import { Button, Col, Container, Form, Jumbotron, Row } from 'react-bootstrap';
 
 import Card from './components/Card';
 import Square from './components/Square';
@@ -47,9 +42,7 @@ const App = () => {
         </Row>
         <Row>
           <Col>
-            <Card color={color}>
-              <Square />
-            </Card>
+            <Card color="#000" />
           </Col>
         </Row>
       </Container>
