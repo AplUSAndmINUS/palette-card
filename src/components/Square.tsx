@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Square = () => {
-  return <h1>This is a square!</h1>;
+  const squareStyles = {
+    height: '300px',
+    backgroundColor: '#FF6663'
+  };
+
+  return <div style={squareStyles}> </div>;
 };
 
 export default Square;

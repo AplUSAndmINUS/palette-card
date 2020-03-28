@@ -7,6 +7,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 
 import Card from './components/Card';
+import Square from './components/Square';
 
 const App = () => {
   const [color, setColor] = React.useState('#000000');
@@ -46,7 +47,9 @@ const App = () => {
         </Row>
         <Row>
           <Col>
-            <Card color="#000" />
+            <Card color={color}>
+              <Square />
+            </Card>
           </Col>
         </Row>
       </Container>
