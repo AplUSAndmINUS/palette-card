@@ -18,21 +18,16 @@ const App = () => {
     setDispColor('#BCBCBC');
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = ($e: any) => {
+    $e.preventDefault();
     const regexp = /^[0-9A-F]+$/;
-    if (color.length === 6) {
+
+    if (color.length === 3 || color.length === 6) {
       if (regexp.test(color)) {
         setDispColor(`#${color.toString()}`);
         setValidate(true);
       }
-    } else if (color.length === 7) {
-      if (color.charAt(0) === '#') {
-        if (regexp.test(color.substr(1, 7))) {
-          setDispColor(color);
-          setValidate(true);
-        }
-      }
-    }
+    } else setValidate(false);
   };
 
   return (
@@ -48,12 +43,16 @@ const App = () => {
                   defaultValue=""
                   id="colorTxt"
                   type="text"
-                  maxLength={7}
+                  maxLength={6}
                   name="colorTxt"
                   onChange={handleChange}
                   placeholder="000000"
+                  required
                   value={color}
                 ></Form.Control>
+                <Form.Control.Feedback type="invalid">
+                  Please supply a six-digit hexadecimal number (0-9) (A-F)
+                </Form.Control.Feedback>
               </Form.Group>
             </Form>
           </Col>
