@@ -13,11 +13,6 @@ const App = () => {
     setColor(target.value);
   };
 
-  const handleClear = () => {
-    setColor('');
-    setDispColor('#BCBCBC');
-  };
-
   const handleSubmit = ($e: any) => {
     $e.preventDefault();
     const regexp = /^[0-9A-F]+$/;
@@ -62,13 +57,6 @@ const App = () => {
             <Button variant="primary" type="submit" onClick={handleSubmit}>
               Submit
             </Button>{' '}
-            <Button
-              variant="outline-secondary"
-              type="reset"
-              onClick={handleClear}
-            >
-              Clear
-            </Button>
           </Col>
         </Row>
         <Row>
